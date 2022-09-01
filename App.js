@@ -1,10 +1,42 @@
 import React, { Component } from 'react';
-import {Text, View, Image, TextInput} from 'react-native';
+import {Text, View, Image, TextInput, StyleSheet} from 'react-native';
 
 const App = () => {
     return (
         <View>
-            <Text> Halo Dunia, Saya Yakin Habib</Text>
+           <KomponenUtama/>
+        </View>
+    );
+};
+
+const GayaKomponen = () =>{
+    return (
+    <View>
+        <Text style={style.text}>Ini adalah Gaya Komponen</Text>
+        <View 
+            style={{
+                width:100,
+                height:100,
+                backgroundColor: '#0abde3',
+                borderColor: '#5f27cd',
+                marginTop: 20,
+                marginLeft: 20,
+            }}
+        />
+    </View>
+    )
+};
+
+const style = StyleSheet.create({
+    text: {
+        fontSize: 18,
+    },
+});
+
+const KomponenUtama = () =>{
+    return(
+        <View>
+             <Text> Halo Dunia, Saya Yakin Habib</Text>
             <Ket/>
             <Photo/>
             <Text> </Text>
@@ -13,8 +45,8 @@ const App = () => {
             <BoxGreen/>
             <Profile/>
         </View>
-    );
-};
+    )
+}
 
 const Ket = () => {
     return <Text> Dibawah ini merupakan gambar dari arsitektur bangunan</Text>
