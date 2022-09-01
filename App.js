@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import {Text, View, Image, TextInput} from 'react-native';
 
 const App = () => {
@@ -10,6 +10,8 @@ const App = () => {
             <Text> </Text>
             <Text> Tulis sesuatu dibawah ini</Text>
             <TextInput style={{borderWidth: 1}} />
+            <BoxGreen/>
+            <Profile/>
         </View>
     );
 };
@@ -26,5 +28,23 @@ const Photo = () => {
         />
     );
 };
+
+class BoxGreen extends Component{
+    render(){
+        return <Text> Ini adalah component dari class component</Text>
+    }
+}
+
+class Profile extends Component{
+    render() {
+        return(
+            <View>
+                <Image source={{uri: 'https://placeimg.com/100/100/animals'}} 
+                style={{width: 100, height: 100}} />
+                <Text>Kucing Orange</Text>            
+            </View>
+        )
+    }
+}
 
 export default App;
